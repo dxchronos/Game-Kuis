@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {  
@@ -22,8 +23,14 @@ public class LevelManager : MonoBehaviour
         {
             _playerProgress.SimpanProgres();
         }
-
+        Debug.Log("Test");
         NextLevel();
+    }
+
+    public void RestartLevel ()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("Replay berfungsi");
     }
 
     public void NextLevel ()

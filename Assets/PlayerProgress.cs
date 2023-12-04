@@ -32,7 +32,7 @@ public class PlayerProgress : ScriptableObject
     progresData.progresLevel.Add("Level Pack 3", 5);
     
     var directory = Application.dataPath + "/Temporary/";
-    var path = directory + "/" + _filename;
+    var path = directory + _filename;
 
     if(!Directory.Exists(directory))
     {
@@ -92,6 +92,8 @@ public class PlayerProgress : ScriptableObject
                 }
 
                 reader.Dispose();
+
+                return true;
             }
             catch (System.Exception e)
             {
