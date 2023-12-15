@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 155669921}
   - component: {fileID: 155669919}
   - component: {fileID: 155669920}
+  - component: {fileID: 155669923}
   m_Layer: 5
   m_Name: Message Console
   m_TagString: Untagged
@@ -812,6 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1c8e03469a6c74ca72cf25b988720a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 155669923}
   _opsiMenang: {fileID: 282159096}
   _opsiKalah: {fileID: 1759354597}
   _tempatPesan: {fileID: 674575322}
@@ -853,6 +855,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155669917}
   m_CullTransparentMesh: 1
+--- !u!95 &155669923
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155669917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15c169e9bf046ba4f9102b10d48db704, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &156677570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1784,7 @@ GameObject:
   - component: {fileID: 514207972}
   - component: {fileID: 514207971}
   - component: {fileID: 514207970}
+  - component: {fileID: 514207973}
   m_Layer: 5
   m_Name: Back To Menu
   m_TagString: Untagged
@@ -1856,6 +1880,18 @@ MonoBehaviour:
           m_StringArgument: Level Menu
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 514207973}
+        m_TargetAssemblyTypeName: PemanggilSuara, Assembly-CSharp
+        m_MethodName: PanggilSuara
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: d8151f11607a47147b2311eb6d47e40c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &514207971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,6 +1930,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514207968}
   m_CullTransparentMesh: 1
+--- !u!114 &514207973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514207968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b2729ba501ead45a74d1d448b9ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981749788}
   - component: {fileID: 981749787}
+  - component: {fileID: 981749789}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -2352,6 +2401,9 @@ MonoBehaviour:
   - {fileID: 1573509882}
   _gameSceneManager: {fileID: 1954534761}
   _namaScenePilihMenu: Level Menu
+  _pemanggilSuara: {fileID: 981749789}
+  _suaraMenang: {fileID: 8300000, guid: 9ed1dc39d438c2342b6c7ac22d9481a0, type: 3}
+  _suaraKalah: {fileID: 8300000, guid: 5942b8aac0e0c5549b0c3de410acec0a, type: 3}
 --- !u!4 &981749788
 Transform:
   m_ObjectHideFlags: 0
@@ -2367,6 +2419,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981749789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981749786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b2729ba501ead45a74d1d448b9ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1017524805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +3013,7 @@ GameObject:
   - component: {fileID: 1404956579}
   - component: {fileID: 1404956578}
   - component: {fileID: 1404956577}
+  - component: {fileID: 1404956580}
   m_Layer: 5
   m_Name: Replay Button
   m_TagString: Untagged
@@ -3080,6 +3145,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1404956580}
+        m_TargetAssemblyTypeName: PemanggilSuara, Assembly-CSharp
+        m_MethodName: PanggilSuara
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: d8151f11607a47147b2311eb6d47e40c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1404956578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3118,6 +3195,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404956575}
   m_CullTransparentMesh: 1
+--- !u!114 &1404956580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404956575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b2729ba501ead45a74d1d448b9ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1466714898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3494,7 @@ GameObject:
   - component: {fileID: 1554159732}
   - component: {fileID: 1554159731}
   - component: {fileID: 1554159730}
+  - component: {fileID: 1554159733}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -3500,6 +3590,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1554159733}
+        m_TargetAssemblyTypeName: PemanggilSuara, Assembly-CSharp
+        m_MethodName: PanggilSuara
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: d8151f11607a47147b2311eb6d47e40c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1554159731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3538,6 +3640,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554159728}
   m_CullTransparentMesh: 1
+--- !u!114 &1554159733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554159728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b2729ba501ead45a74d1d448b9ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1573509877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3809,6 +3923,7 @@ GameObject:
   - component: {fileID: 1670489485}
   - component: {fileID: 1670489484}
   - component: {fileID: 1670489483}
+  - component: {fileID: 1670489486}
   m_Layer: 5
   m_Name: Next Level Button
   m_TagString: Untagged
@@ -3940,6 +4055,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1670489486}
+        m_TargetAssemblyTypeName: PemanggilSuara, Assembly-CSharp
+        m_MethodName: PanggilSuara
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: d8151f11607a47147b2311eb6d47e40c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1670489484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3978,6 +4105,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670489481}
   m_CullTransparentMesh: 1
+--- !u!114 &1670489486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670489481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b2729ba501ead45a74d1d448b9ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1759354597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,8 +4517,112 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4309368133998315810, guid: f7aee803bc4905346a511cd8fb8aa506, type: 3}
       insertIndex: -1
       addedObject: {fileID: 155669918}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7743771409152482637, guid: f7aee803bc4905346a511cd8fb8aa506, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8253167851205300488}
   m_SourcePrefab: {fileID: 100100000, guid: f7aee803bc4905346a511cd8fb8aa506, type: 3}
+--- !u!1 &8253167851205300487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7743771409152482637, guid: f7aee803bc4905346a511cd8fb8aa506, type: 3}
+  m_PrefabInstance: {fileID: 8253167851205300486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8253167851205300488
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253167851205300487}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fcc317b4b7265f9429a7b1cbf10dfd3f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

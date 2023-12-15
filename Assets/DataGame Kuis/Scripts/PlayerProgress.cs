@@ -21,17 +21,30 @@ public class PlayerProgress : ScriptableObject
  [SerializeField]
  private string _filename = "savefile.txt";
 
+ [SerializeField] 
+ private string _startingLevelPackName = string.Empty;
+
  public MainData progresData = new MainData();
 
  public void SimpanProgres()
  {
-    progresData.koin = 100;
-    if (progresData.progresLevel == null)
-    progresData.progresLevel = new();
-    progresData.progresLevel.Add("Level Pack 1", 3);
-    progresData.progresLevel.Add("Level Pack 3", 5);
+    // progresData.koin = 100;
+    // if (progresData.progresLevel == null)
+    // progresData.progresLevel = new();
+    // progresData.progresLevel.Add("Level Pack 1", 3);
+    // progresData.progresLevel.Add("Level Pack 3", 5);
     
-    var directory = Application.dataPath + "/Temporary/";
+    if (progresData.progresLevel == null)
+    {
+        progresData.progresLevel = new();
+        progresData.koin = 0;
+        progresData.progresLevel.Add(_startingLevelPackName, 1);
+    }
+#if UNITY_EDITOR
+    string directory = Application.dataPath + "/Temporary/";
+#elif (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+    string directory = Application.persistentDataPath + "/ProgresLokal/";
+#endif
     var path = directory + _filename;
 
     if(!Directory.Exists(directory))

@@ -24,6 +24,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private string _namaScenePilihMenu = string.Empty;
 
+    [SerializeField] private PemanggilSuara _pemanggilSuara = null;
+
+    [SerializeField] private AudioClip _suaraMenang = null;
+
+    [SerializeField] private AudioClip _suaraKalah = null;
+
     private int _indexSoal = -1;
 
     private void Start() 
@@ -47,9 +53,18 @@ public class LevelManager : MonoBehaviour
 
     private void UI_PoinJawaban_EventJawabSoal(string jawaban, bool adalahBenar)
     {
-        if (adalahBenar)
+        _pemanggilSuara.PanggilSuara(adalahBenar ?  _suaraMenang : _suaraKalah);
+
+        if (!adalahBenar) return;
+
+        string namaLevelPack = _inisialData.levelPack.name;
+        int levelTerakhir = _playerProgress.progresData.progresLevel[namaLevelPack];
+
+        if (_indexSoal + 2 > levelTerakhir)
         {
             _playerProgress.progresData.koin += 20;
+            _playerProgress.progresData.progresLevel[namaLevelPack] = _indexSoal + 2;
+            _playerProgress.SimpanProgres();
         }
     }
 
